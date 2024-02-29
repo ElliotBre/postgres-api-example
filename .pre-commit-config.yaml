@@ -1,11 +1,11 @@
 repos:
-- repo: https://github.com/PyCQA/pylint
-  rev: pylint-2.7.2
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v4.5.0
   hooks:
-  - id: pylint
-    exclude: ^server/
+  - id: check-yaml
+  - id: end-of-file-fixer
+  - id: trailing-whitespace
 - repo: https://github.com/pre-commit/mirrors-autopep8
-  rev: v1.5.4  # Use the sha / tag you want to point at
+  rev: v1.5.4
   hooks:
   - id: autopep8
-    exclude: ^server/
