@@ -1,7 +1,7 @@
 FROM python:3.11
 
 COPY requirements.txt .pre-commit-config.yaml ./
-COPY /source ./source
+COPY app/source ./source
 RUN pip install --no-cache-dir -r requirements.txt
 
 RUN python3 source/manage.py makemigrations
