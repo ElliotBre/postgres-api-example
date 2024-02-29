@@ -1,5 +1,5 @@
-from app.viewsets import app
+from app.viewsets import appViewset
 from rest_framework import routers
 
 router = routers.DefaultRouter()
-router.register('app', app)
+router.register('appRouter', appViewset)

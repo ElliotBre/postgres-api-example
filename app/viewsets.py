@@ -3,6 +3,6 @@ from . import models
 from . import serializers
 
 
-class app(viewsets.ModelViewSet):
+class appViewset(viewsets.ModelViewSet):
     queryset = models.test.objects.all()
-    serializer_class = serializers.app
+    serializer_class = serializers.appSerializer
