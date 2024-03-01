@@ -4,6 +4,7 @@ COPY requirements.txt .pre-commit-config.yaml ./
 COPY django-app/pyDB ./django-app/pyDB
 RUN pip install --no-cache-dir -r requirements.txt
 
+RUN python3 -m venv env && . env/bin/activate
 RUN python3 django-app/pyDB/manage.py makemigrations
 RUN python3 django-app/pyDB/manage.py migrate
 
